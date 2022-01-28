@@ -63,6 +63,9 @@
         height: 100%;
         background-size: cover; 
     }
+    #surprice{
+        display: none;
+    }
     @media only screen and (max-width: 600px) {
         .box {
         width: 300px;
@@ -74,14 +77,19 @@
     <h1>Zé Generator</h1>
     <p>Clique no botão abaixo e viva a experiência... <br>
         <a href="https://www.instagram.com/oadrianolucas/">Feito com ❤️ por Adriano </a></p>
-    
-    <button class="myButton" onClick="novafrase()"> <span>Gerar o Zé</span></button>
+    <button class="myButton" onClick="novafrase()"> <span>Gerar o Zé</span></button><br>
+    <button class="myButton" onClick="surprice()">Abrir/Fechar Surpresa</button>
     <div class="container">
         <div class="box">
-      <div id="frase" class="frase"></div>
-      <div id="ze"></div>
+            <div id="surprice">
+                <video width="400" height="400" controls>
+                    <source src="https://video.fcgh50-1.fna.fbcdn.net/v/t42.11131-2/15489986_357962784575945_1653506114823651328_n.mp4?_nc_cat=109&ccb=1-5&_nc_sid=985c63&efg=eyJ2ZW5jb2RlX3RhZyI6InNkIiwidmlkZW9fYXBwX2lkIjo5ODk3MzY0NjQ0NzM4MDd9&_nc_eui2=AeEbXM3o5F03goZwWHEOQnXs-UPN1lt_shH5Q83WW3-yEc8XAYO-TZAKEg-JnCuUFKCevt2mDEHIA-GzUo3AZTkm&_nc_ohc=eFQhS7XG22AAX81g5pS&_nc_rml=0&_nc_ht=video.fcgh50-1.fna&oh=00_AT-rE7kzfmYWXVAO6pSTWfd5dl5h1q7-AFZZew58kTF9uA&oe=61F3811F" type="video/mp4">
+                </video>
+            </div>
+            <div id="frase" class="frase"></div>
+            <div id="ze"></div>
+        </div>
     </div>
-</div>
 </body>
 <script>
 var frases = [
@@ -97,6 +105,11 @@ var frases = [
   'OOOO JULIAAA',
   'Qual foi parça',
   'Eu juro, eu jurooooo',
+  'Bicharadaaaaa',
+  'Inferior',
+  'Vou comprar um peça',
+  'Já vouuuuuu',
+  'Vamos dar um tiro?'
 ];
 
  var ze = [
@@ -146,7 +159,10 @@ var frases = [
  "https://scontent.fcgh50-1.fna.fbcdn.net/v/t31.18172-8/14556657_691678177655988_8918539129346758320_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGqhfIxvY7nZk-GhMiShu3Wczc-PHr-DcdzNz48ev4Nx8uUB6zXccE5r6LmK2mDYg8wPO9550yHGWEOtAvb96TG&_nc_ohc=tLcF18OdzxEAX9BwrCz&_nc_ht=scontent.fcgh50-1.fna&oh=00_AT9hjMmcauARuLzbwjG-g8u5v01PrOXoSDvgZ7H2pwZDEA&oe=621A9BC9",
  "https://scontent.fcgh50-1.fna.fbcdn.net/v/t31.18172-8/14362512_686621748161631_899618870168334805_o.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeEXQ0bTD8iFzborGAGMKxmF5vFYt38QWdzm8Vi3fxBZ3LafSFCKd_6tqv_hS-romsQBHl2zahbcfWKuIu9q6Q0g&_nc_ohc=HKAwVY1EM_8AX9Np96K&_nc_ht=scontent.fcgh50-1.fna&oh=00_AT-ZeZCK2pL7VeB6Mutj1SfWsh8Luggd7O1nSqcnTfFlZA&oe=6218578A",
  "https://scontent.fcgh50-1.fna.fbcdn.net/v/t1.18169-9/14358657_681665485323924_2138988052677309037_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGbR9gwr1TKdCGZpu99Cgx9OjTwe7Y0LOQ6NPB7tjQs5OkBLJf2T7LN3v5ai_IapEM43gE5JRnH5ptTVnTjy1q-&_nc_ohc=qY04Us-PqlUAX-qsRsG&_nc_ht=scontent.fcgh50-1.fna&oh=00_AT_WR-DQUYM_gpOJxPfnYU04WwBZQ0PZDSZKKE6xvN78YQ&oe=6217CA98",
- "https://scontent.fcgh50-1.fna.fbcdn.net/v/t1.6435-9/93013710_1576539099169887_1997907258683424768_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFmfbE5iAHIOaMo6rK5vxg0tv2vSgA6jx-2_a9KADqPH7J35pVJwnQA2fPdBoy_5m6xDHCm-BRPoVTM_Bi78sbe&_nc_ohc=nC3FdgUiragAX_l8geN&_nc_ht=scontent.fcgh50-1.fna&oh=00_AT_Ig8QiJ3qdw8PAe8fw90l0hPEQX3U9T7hYpTismKEETw&oe=62188F89"
+ "https://scontent.fcgh50-1.fna.fbcdn.net/v/t1.6435-9/93013710_1576539099169887_1997907258683424768_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=174925&_nc_eui2=AeFmfbE5iAHIOaMo6rK5vxg0tv2vSgA6jx-2_a9KADqPH7J35pVJwnQA2fPdBoy_5m6xDHCm-BRPoVTM_Bi78sbe&_nc_ohc=nC3FdgUiragAX_l8geN&_nc_ht=scontent.fcgh50-1.fna&oh=00_AT_Ig8QiJ3qdw8PAe8fw90l0hPEQX3U9T7hYpTismKEETw&oe=62188F89",
+ "https://scontent.fcgh50-1.fna.fbcdn.net/v/t1.6435-9/68996903_1355858157904650_3352461006637891584_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_eui2=AeE-My7sP3K-aPOVxAajBNnLKpbch_7XVxkqltyH_tdXGdqQ6leJjtCYXpRmyRe0pzp75XrbnJ-u6tsmIbWoeZw6&_nc_ohc=yzsnPJ2dlI4AX8RBl3_&tn=L0GY0uEEclYGPHhj&_nc_ht=scontent.fcgh50-1.fna&oh=00_AT8Cj0ttTBCY-7vmU20mRw1BOPVgj4ZxswaEmHwi3Zmb2w&oe=6219EA89",
+ "https://scontent.fcgh50-1.fna.fbcdn.net/v/t1.6435-9/69382305_1366223316868134_4388994596944740352_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=174925&_nc_eui2=AeGv-ItI4-9CPnD7SDXhRt4lQflGB9pr9QNB-UYH2mv1A9dA3VtvSMrRzF925ocTyaxbrj4Gjr35UGLeFnG6xpN5&_nc_ohc=4_W-SRwgL2wAX-eJCVE&tn=L0GY0uEEclYGPHhj&_nc_ht=scontent.fcgh50-1.fna&oh=00_AT97C72S2pZhIqJKSnkGFqA2qBpkemVSvxTPgpHC3mrVQw&oe=621A8337",
+
  ]
 
 
@@ -155,6 +171,17 @@ function novafrase() {
     document.getElementById('frase').innerHTML = frases[aleatorio];
     var i = Math.floor((Math.random() * (ze.length)));
     document.getElementById('ze').style.backgroundImage = "url('"+ze[i]+"')";
+}
+
+function surprice(obj1, obj2){
+    var el = document.getElementById('surprice');
+
+    if ( el.style.display != 'block' ) {
+        el.style.display = 'block';
+    }
+    else if(el.style.display != 'none'){
+        el.style.display = 'none';
+    }
 }
 </script>
 </html>
